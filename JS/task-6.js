@@ -12,9 +12,9 @@
 
 const checkForSpam = function(string) {
   let stringLowerCase = string.toLowerCase();
-  let message = "false";
+  let message = false;
   if (stringLowerCase.includes("spam") || stringLowerCase.includes("sale")) {
-    message = "true";
+    message = true;
   }
   return message;
 };

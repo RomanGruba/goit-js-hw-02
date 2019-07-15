@@ -5,30 +5,29 @@
 // Если длина больше 40 символов, то функция обрезает строку до 40-ка символов и добавляет в конец строки троеточие '...', после чего возвращает укороченную версию.
 // Вызовы функции для проверки работоспособности твоей реализации.
 
-console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
+console.log(formatString("Curabitur ligula sapien, tincidunt non."));
 // // вернется оригинальная строка
 
-console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
+console.log(formatString("Vestibulum facilisis, purus nec pulvinar iaculis."));
 // // вернется форматированная строка
 
-console.log(formatString('Curabitur ligula sapien.'));
+console.log(formatString("Curabitur ligula sapien."));
 // // вернется оригинальная строка
 
 console.log(
   formatString(
-    'Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',
-  ),
+    "Nunc sed turpis. Curabitur a felis in nunc fringilla tristique."
+  )
 );
 // вернется форматированная строка
 
 function formatString(string) {
-  let line = string.split('');
+  let line = string.split("");
   if (line.length < 40) {
-    return line.join('');
+    return line.join("");
   } else {
-    line.length = 40;
-    line.push("...");
-    return line.join('');
+    let newLine = line.slice(0, 40);
+    newLine.push("...");
+    return newLine.join("");
   }
 }
-
